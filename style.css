@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 1000px;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 35%;
+    background-color: #1a2a3a;
+    color: white;
+    padding: 40px 30px;
+}
+
+.profile-img-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #d91e18; /* Aksen merah seperti di gambar */
+    margin: 0 auto 20px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.sidebar h3 {
+    border-bottom: 2px solid #5a7b9c;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebar ul li {
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+    width: 15px;
+}
+
+/* Skills Dots */
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Main Content */
+.main-content {
+    width: 65%;
+    padding: 40px;
+    color: #333;
+}
+
+.main-content h2 {
+    color: #1a2a3a;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #1a2a3a;
+    margin: 5px 0 15px 0;
+    width: 50px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Timeline */
+.timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+    border-left: 2px solid #1a2a3a;
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #1a2a3a;
+    border-radius: 50%;
+}
+
+.year {
+    min-width: 100px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.content strong {
+    display: block;
+    font-size: 15px;
+}
+
+.content p {
+    font-size: 13px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+}
